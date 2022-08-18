@@ -7,7 +7,7 @@ const dfInfo = require('../DB/dbinfo')
 
 const { Client } = require('pg') //DB사용을 위함
 const { RowDescriptionMessage } = require('pg-protocol/dist/messages')
-const dbInfo = require('../DB/dbinfo')
+const dbInfo = {}//require('../DB/dbinfo')
 app.use(cors())
 
 //Post를 쓰려면 이 2줄이 필요하다.
@@ -16,6 +16,11 @@ app.use(express.urlencoded({extended:false}))
 //서버에서 pg를 다운로드한다.
 
 //()=> 화살표 함수
+
+app.get('/',(req, res)=>{
+    res.send('성공')
+})
+
 
 app.get('/Kor',(req, res)=>{//req는 아이디, 페스워드, res는 다시 받아오는 값
     res.send('한국어')
