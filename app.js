@@ -7,7 +7,18 @@ const cors = require('cors')
 
 const { Client } = require('pg') //DB사용을 위함
 const { RowDescriptionMessage } = require('pg-protocol/dist/messages')
-const dbInfo = {}//require('../DB/dbinfo')
+//const dbInfo = {}//require('../DB/dbinfo')
+
+const dbInfo = {
+    user:'omhfjgdlgmgczf'
+    ,password:'debbd73c7cc4a932f0cca61124ad51cc66c76f1057ab384e30542105d636c0f7'
+    ,port:5432
+    ,host:'lec2-54-85-56-210.compute-1.amazonaws.com'
+    ,database:'d6p9ub4u6fc7e1'
+    ,ssl:{rejectUnauthorized:false} //헤로쿠 연결용 추가 코드
+
+}
+
 app.use(cors())
 
 //Post를 쓰려면 이 2줄이 필요하다.
