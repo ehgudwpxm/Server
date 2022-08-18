@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 
-const dfInfo = require('../DB/dbinfo')
+//const dfInfo = require('../DB/dbinfo')
 
 
 const { Client } = require('pg') //DB사용을 위함
